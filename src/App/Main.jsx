@@ -25,7 +25,7 @@ const Main = () => {
   return (
     <div
       id='smooth-wrapper'
-      className='  flex flex-col gap-06 smooth-wrapper  '
+      className='  flex flex-col gap-06 smooth-wrapper   transition-colors duration-500'
     >
       <div className='smooth-content px-02 flex flex-col gap-06 snap-y'>
         <Hero />

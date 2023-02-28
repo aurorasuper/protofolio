@@ -32,12 +32,14 @@ const BoombizInfo = () => {
           </p>
         </div>
         <div className='infoBtn'>
-          <div
+          <a
             className='btnBaseStyle  btnPrimary btnBaseText btnPrimaryText w-fit px-02 z-10'
-            onClick={() => {}}
+            href='https://github.com/Linus-BL/age-tech'
+            target='_blank'
+            rel='noreferrer'
           >
             <ImGithub className='fill-mainWhite dark:fill-mainBlack' />
-          </div>
+          </a>
         </div>
       </div>
       {/*       <div className='hidden md:visible w-full md:flex md:justify-center md:w-1/2 md:h-1/2 md:py-04'>

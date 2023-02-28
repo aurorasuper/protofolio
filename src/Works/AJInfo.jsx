@@ -44,12 +44,14 @@ const AJInfo = (props, ref) => {
           </p>
         </div>
         <div className='infoBtn'>
-          <div
-            className='btnBaseStyle  btnPrimary btnBaseText btnPrimaryText w-fit px-02 z-10'
-            onClick={() => {}}
+          <a
+            className='btnBaseStyle btnPrimary btnBaseText btnPrimaryText w-fit px-02 z-10'
+            href='https://github.com/aurorasuper/ActivityAppBackend'
+            target='_blank'
+            rel='noreferrer'
           >
             <ImGithub className='fill-mainWhite dark:fill-mainBlack' />
-          </div>
+          </a>
         </div>
       </div>
       {/*       <div className='hidden md:visible w-full md:flex md:justify-center md:w-1/2 md:h-1/2 md:py-04'>

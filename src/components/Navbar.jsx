@@ -6,6 +6,7 @@ import { useRefContext } from "../context/RefsContext";
 import { gsap, Power3 } from "gsap";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
 import ThemePicker from "./ThemePicker";
+import { ReactComponent as Logo } from "../utils/images/SK1.svg";
 
 gsap.registerPlugin(ScrollToPlugin);
 const Navbar = () => {
@@ -28,7 +29,7 @@ const Navbar = () => {
     let navPos = navRef.current.getBoundingClientRect().height;
     // offset scroll tp just below navbar
     var offsetPos = refPos + window.scrollY - navPos;
-    console.log(offsetPos);
+
     gsap.to(window, {
       duration: 0.75,
       scrollTo: { y: ref.current, offsetY: navPos },
@@ -44,16 +45,20 @@ const Navbar = () => {
   return (
     <div
       ref={navRef}
-      className='px-01 md:px-02 z-50 py-00 md:py-01 sticky top-0 w-full flex justify-between items-center h-04 md:h-06 backdrop-blur-sm transition ease-in '
+      className='px-01 md:px-02 z-50 py-00 md:py-01 sticky top-0 w-full flex justify-between
+     items-center h-04 md:h-06 backdrop-blur-sm transition ease-in '
     >
-      <h1
-        className=' text-3xl md:text-5xl w-full '
-        onClick={() => {
-          handleClick(heroRef);
-        }}
-      >
-        Susan Kronberg
-      </h1>
+      <div className='w-full'>
+        <button className='hover:cursor-pointer hover:animate-wiggle pt-02 w-[15%] lg:w-[10%]'>
+          <Logo
+            className='mx-auto bottom-0 w-full h-full'
+            onClick={() => {
+              handleClick(heroRef);
+            }}
+          />
+        </button>
+      </div>
+
       <ul id='largeMenu' className='hidden md:flex gap-02'>
         <li
           className='font-pirata text-xl p-01 group flex flex-col items-center'
@@ -97,14 +102,14 @@ const Navbar = () => {
         }
       >
         <ul className=' uppercase flex flex-col justify-center items-center gap-02 '>
-          <h1
-            className=' text-3xl md:text-5xl capitalize border-b border-primaryLight dark:border-primaryDark w-[50vw] text-center'
-            onClick={() => {
-              handleClick(heroRef);
-            }}
-          >
-            Susan Kronberg
-          </h1>
+          <button className='hover:cursor-pointer hover:animate-wiggle pt-02 w-[25%]'>
+            <Logo
+              className='mx-auto bottom-0 w-full h-full'
+              onClick={() => {
+                handleClick(heroRef);
+              }}
+            />
+          </button>
           <li
             className='font-pirata text-xl p-01 border-b border-primaryLight dark:border-primaryDark w-[50vw] text-center'
             onClick={() => {

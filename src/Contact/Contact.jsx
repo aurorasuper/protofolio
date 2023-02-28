@@ -4,6 +4,7 @@ import { ReactComponent as Bottle } from "../utils/images/Bottle.svg";
 import { useRefContext } from "../context/RefsContext";
 import { ImGithub, ImLinkedin } from "react-icons/im";
 import emailjs from "@emailjs/browser";
+import { ReactComponent as P5 } from "../utils/images/P5.js_icon.svg";
 
 const Contact = () => {
   const { contactRef } = useRefContext();
@@ -24,7 +25,7 @@ const Contact = () => {
       }); */
 
   const labelClassname =
-    "font-pd h4 font-normal font text-colorSettings  text-mainWhite dark:text-mainBlack pt-03";
+    "font-pd h4 font-normal font text-colorSettings  text-mainWhite dark:text-mainBlack pt-03  transition-colors duration-500";
   const formGroup = "flex flex-col py-01 gap-01 ";
   const inputBox =
     "p-01 peer rounded placeholder:text-primaryLight placeholder:opacity-50 dark:placeholder:text-mainBlack font-pd focus:outline-none focus:shadow-lg focus:shadow-darkestRed dark:focus:shadow-darkCyan ";
@@ -84,21 +85,6 @@ const Contact = () => {
               className='fill-mainWhite dark:fill-mainBlack
                 '
             />
-            <div className='flex flex-row gap-03 justify-evenly py-06 w-full'>
-              <a href='https://github.com/sukr0009' target='_blank'>
-                <ImGithub className=' fill-mainWhite dark:fill-mainBlack w-03 h-03 hover:cursor-pointer duration-300 hover:scale-110 hover:shadow-lg hover:shadow-darkestRed dark:hover:shadow-darkestCyan rounded-full' />
-              </a>
-              <a
-                href='https://www.linkedin.com/in/susan-kronberg-b39a35229/'
-                target='_blank'
-              >
-                <ImLinkedin
-                  className=' fill-mainWhite dark:fill-mainBlack w-03 h-03
-        hover:cursor-pointer duration-300 hover:scale-110 hover:shadow-lg
-        hover:shadow-darkestRed dark:hover:shadow-darkestCyan rounded-sm'
-                />
-              </a>
-            </div>
           </div>
           <div className='lg:w-1/3 '>
             <h1 className='text-mainWhite dark:text-mainBlack h2'>
@@ -150,28 +136,6 @@ const Contact = () => {
           </div>
         </div>
       )}
-
-      <div className='visible lg:hidden flex flex-row gap-03  justify-center pt-03 pb-04'>
-        <a href='https://github.com/sukr0009' target='_blank'>
-          <ImGithub className=' fill-mainWhite dark:fill-mainBlack w-03 h-03 hover:cursor-pointer duration-300 hover:scale-110 hover:shadow-lg hover:shadow-darkestRed dark:hover:shadow-darkestCyan rounded-full' />
-        </a>
-        <a
-          href='https://www.linkedin.com/in/susan-kronberg-b39a35229/'
-          target='_blank'
-        >
-          <ImLinkedin
-            className=' fill-mainWhite dark:fill-mainBlack w-03 h-03
-        hover:cursor-pointer duration-300 hover:scale-110 hover:shadow-lg
-        hover:shadow-darkestRed dark:hover:shadow-darkestCyan rounded-sm'
-          />
-        </a>
-      </div>
-      <p
-        className='text-center py-04 font-pirata
-      '
-      >
-        Created by Susan Kronberg
-      </p>
     </div>
   );
 };

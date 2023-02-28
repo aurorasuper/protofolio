@@ -34,6 +34,17 @@ module.exports = {
         "05": "4rem",
         "06": "6rem",
       },
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-5deg)" },
+          "50%": { transform: "rotate(5deg)" },
+        },
+      },
+      animation: {
+        "spin-slow": "spin 3s linear infinite",
+        quarterTurn: "slanted 10s linear",
+        wiggle: "wiggle 200ms ease-in-out infinite",
+      },
     },
   },
   plugins: [],

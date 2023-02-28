@@ -1,26 +1,17 @@
 import Navbar from "../components/Navbar";
 import "../css/App.css";
-import Hero from "../Home/Hero";
-import AJInfo from "../Works/AJInfo";
-import PPInfo from "../Works/PPInfo";
 import BoombizInfo from "../Works/BoombizInfo";
 import { useState, useEffect, useRef } from "react";
-import About from "../About/About";
-import Contact from "../Contact/Contact";
 import { useRefContext } from "../context/RefsContext";
 import { gsap, Power3 } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useSmoothScroll } from "../components/SmoothScroll";
-import ActivityJournal from "../Works/ActivityJournal";
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-  Outlet,
-  RouterProvider,
-} from "react-router-dom";
 import Main from "./Main";
+import Footer from "../components/Footer";
+import { LoadScreen } from "../components/LoadScreen";
+
 gsap.registerPlugin(ScrollTrigger);
+
 function App() {
   const [load, setLoad] = useState(true);
   const didAnimate = useRef(false);
@@ -29,6 +20,7 @@ function App() {
   const height = windowSize.current[1];
   const width = windowSize.current[0];
   const [showAJ, setShowAj] = useState(false);
+  const appRef = useRef(null);
   const {
     worksRef,
     AJinfoRef,
@@ -42,18 +34,21 @@ function App() {
 
   useSmoothScroll();
 
+  /**
+   * Loading screen
+   */
   useEffect(() => {
-    setLoad(false);
+    // only set timer and fix page when it is loading
+    if (load) {
+      // fixed position when loading screen is shown
+      appRef.current.style.position = "fixed";
+      setTimeout(() => {
+        // scrollable after timeout
+        appRef.current.style.position = "relative";
+        setLoad(false);
+      }, 5000);
+    }
   });
-
-  const router = createBrowserRouter(
-    createRoutesFromElements(
-      <Route path='/' element={<Root />}>
-        <Route index element={<Main />} />
-        <Route path='activityJournal' element={<ActivityJournal />} />
-      </Route>
-    )
-  );
 
   /**
    * Sets scroll animations to hero page
@@ -83,7 +78,6 @@ function App() {
           start: isMobile ? "top-=100 top" : "top top+=200", // which means "when the top of the trigger hits 40px above the bottom of the viewport
           end: "center+=80 top",
           toggleActions: "play none none reset",
-          markers: true,
           pin: true,
         });
       }
@@ -248,30 +242,16 @@ function App() {
   }, [load]);
 
   return (
-    <div>
-      {load ? (
-        <div className='bg-mainWhite dark:bg-mainBlack w-screen h-screen flex justify-center items-center'>
-          <p>Loading</p>
-        </div>
-      ) : (
-        <div className='relative  bg-mainWhite dark:bg-mainBlack'>
-          <Navbar />
-          <Main />
-        </div>
-      )}
+    <div
+      ref={appRef}
+      className='relative bg-mainWhite dark:bg-mainBlack transition-colors duration-500'
+    >
+      {load && <LoadScreen />}
+      <Navbar />
+      <Main />
+      <Footer />
     </div>
   );
 }
 
 export default App;
-
-const Root = () => {
-  return (
-    <div>
-      <Navbar />
-      <div>
-        <Outlet />
-      </div>
-    </div>
-  );
-};

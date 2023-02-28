@@ -62,7 +62,7 @@ code {
 
 @layer components {
 	.btnBaseStyle {
-		@apply cursor-pointer w-full py-02 rounded flex justify-center items-center duration-300 hover:scale-110 hover:shadow-lg hover:shadow-darkestRed dark:hover:shadow-darkestCyan;
+		@apply cursor-pointer w-full py-02 rounded flex justify-center items-center transition duration-300 hover:scale-110 hover:shadow-lg hover:shadow-darkestRed dark:hover:shadow-darkestCyan;
 	}
 
 	.btnPrimary {
