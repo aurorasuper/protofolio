@@ -22,7 +22,8 @@ const Hero = () => {
         >
           <span
             id='heroSubtitle'
-            className='h2 font-pd invertColors bg-primaryLight dark:bg-primaryDark hover:border-b-2 hover:border-dotted  border-primaryLight dark:border-primaryDark'
+            className='h2 realistic-marker-highlight font-pd invertColors w-full before:hover:shadow-lg ml-01
+        before:hover:shadow-darkestRed dark:before:hover:shadow-darkestCyan before:bg-primaryLight dark:before:bg-primaryDark'
           >
             Female digital engineer of 2023
           </span>
@@ -32,6 +33,29 @@ const Hero = () => {
           program at Umeå University, specilizing in software engineering and
           HCI/Human-AI interaction.
         </p>
+        <svg
+          xmlns='//www.w3.org/2000/svg'
+          version='1.1'
+          className='svg-filters hidden'
+        >
+          <defs>
+            <filter id='marker-shape'>
+              <feTurbulence
+                type='fractalNoise'
+                baseFrequency='0 0.15'
+                numOctaves='1'
+                result='warp'
+              />
+              <feDisplacementMap
+                xChannelSelector='R'
+                yChannelSelector='G'
+                scale='30'
+                in='SourceGraphic'
+                in2='warp'
+              />
+            </filter>
+          </defs>
+        </svg>
       </div>
       <div
         id='heroSmileySticker'

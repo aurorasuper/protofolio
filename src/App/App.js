@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar";
 import "../css/App.css";
-import BoombizInfo from "../Works/BoombizInfo";
 import { useState, useEffect, useRef } from "react";
 import { useRefContext } from "../context/RefsContext";
 import { gsap, Power3 } from "gsap";
@@ -14,12 +13,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   const [load, setLoad] = useState(true);
-  const didAnimate = useRef(false);
   const ease = Power3.easeOut();
   const windowSize = useRef([window.innerWidth, window.innerHeight]);
   const height = windowSize.current[1];
   const width = windowSize.current[0];
-  const [showAJ, setShowAj] = useState(false);
   const appRef = useRef(null);
   const {
     worksRef,

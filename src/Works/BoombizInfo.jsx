@@ -31,9 +31,9 @@ const BoombizInfo = () => {
             database.
           </p>
         </div>
-        <div className='infoBtn'>
+        <div className='infoBtn  px-01 w-1/3'>
           <a
-            className='btnBaseStyle  btnPrimary btnBaseText btnPrimaryText w-fit px-02 z-10'
+            className='btnBaseStyle  btnPrimary btnBaseText btnPrimaryText w-full px-02 z-10'
             href='https://github.com/Linus-BL/age-tech'
             target='_blank'
             rel='noreferrer'

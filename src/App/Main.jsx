@@ -2,15 +2,11 @@ import Hero from "../Home/Hero";
 import AJInfo from "../Works/AJInfo";
 import PPInfo from "../Works/PPInfo";
 import BoombizInfo from "../Works/BoombizInfo";
-import { useState, useEffect, useRef } from "react";
 import About from "../About/About";
 import Contact from "../Contact/Contact";
 import { useRefContext } from "../context/RefsContext";
-import { gsap, Power3 } from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Main = () => {
-  const ease = Power3.easeOut();
   const {
     worksRef,
     AJinfoRef,

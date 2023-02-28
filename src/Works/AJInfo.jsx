@@ -43,9 +43,9 @@ const AJInfo = (props, ref) => {
             preform. The loggs are editable and deletable according to CRUD.
           </p>
         </div>
-        <div className='infoBtn'>
+        <div className='infoBtn px-01 w-1/3'>
           <a
-            className='btnBaseStyle btnPrimary btnBaseText btnPrimaryText w-fit px-02 z-10'
+            className='btnBaseStyle btnPrimary btnBaseText btnPrimaryText w-full px-02 z-10'
             href='https://github.com/aurorasuper/ActivityAppBackend'
             target='_blank'
             rel='noreferrer'

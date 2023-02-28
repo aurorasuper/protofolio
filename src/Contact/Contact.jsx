@@ -1,10 +1,8 @@
 import React from "react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { ReactComponent as Bottle } from "../utils/images/Bottle.svg";
 import { useRefContext } from "../context/RefsContext";
-import { ImGithub, ImLinkedin } from "react-icons/im";
 import emailjs from "@emailjs/browser";
-import { ReactComponent as P5 } from "../utils/images/P5.js_icon.svg";
 
 const Contact = () => {
   const { contactRef } = useRefContext();

@@ -32,7 +32,7 @@ code {
   h1,h2,h3{
     @apply font-pirata
   }
-  h4,h5,h6,p{
+  h4,h5,h6,p, span{
     @apply font-pd
   }
 
@@ -88,4 +88,20 @@ code {
 	.btnSecondaryText {
 		@apply text-primaryLight dark:text-primaryDark;
 	}
+}
+
+.realistic-marker-highlight {
+	position: relative;
+}
+
+.realistic-marker-highlight:before {
+	content: "";
+	width: 105%;
+	height: 1.5em;
+	position: absolute;
+	z-index: -1;
+	filter: url(#marker-shape);
+	left: -0.25em;
+	top: 0.1em;
+	padding: 0 0.25em;
 }
