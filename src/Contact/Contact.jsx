@@ -58,7 +58,7 @@ const Contact = () => {
     <div
       id='contactPage'
       ref={contactRef}
-      className='px-02 snap-center min-h-screen h-fit bg-primaryLight dark:bg-cyanBg '
+      className='px-02 snap-center py-04 min-h-screen h-fit bg-primaryLight dark:bg-cyanBg '
     >
       {emailSuccess ? (
         <div className='w-full flex flex-col justify-center items-center'>
