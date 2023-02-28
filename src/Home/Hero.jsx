@@ -19,19 +19,17 @@ const Hero = () => {
         <a
           href='https://news.cision.com/se/cogig-ab/r/cogig-announces-this-year-s-female-digital-engineer,c3716169'
           target='_blank'
+          className='p-01 max-w-fit before:min-h-fit before:bg-primaryLight dark:before:bg-primaryDark hover:before:shadow-xl hover:before:shadow-darkestRed hover:dark:before:shadow-darkestCyan items-center realistic-marker-highlight'
         >
-          <span
-            id='heroSubtitle'
-            className='h2 realistic-marker-highlight font-pd invertColors w-full before:hover:shadow-lg ml-01
-        before:hover:shadow-darkestRed dark:before:hover:shadow-darkestCyan before:bg-primaryLight dark:before:bg-primaryDark'
-          >
+          <span id='heroSubtitle' className='h2 font-pd invertColors '>
             Female digital engineer of 2023
           </span>
         </a>
         <p className='text-2xl font-pd py-02'>
           I'm in my 4th year in the MSc in Interaction Technology and Design
           program at Umeå University, specilizing in software engineering and
-          HCI/Human-AI interaction.
+          HCI/Human-AI interaction.{" "}
+          <span className='realistic-marker-highlight'>Highlight Text</span>
         </p>
         <svg
           xmlns='//www.w3.org/2000/svg'

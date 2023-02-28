@@ -1,7 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { ReactComponent as SK } from "../utils/images/SK1.svg";
-import useWindowDimensions from "./WindowDimensions";
-import Sketch from "react-p5";
 import { ReactComponent as Path } from "../utils/images/8path.svg";
 import { gsap, Power3 } from "gsap";
 import { MotionPathPlugin } from "gsap/all";
