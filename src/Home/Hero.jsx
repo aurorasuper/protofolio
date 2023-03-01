@@ -29,7 +29,6 @@ const Hero = () => {
           I'm in my 4th year in the MSc in Interaction Technology and Design
           program at Umeå University, specilizing in software engineering and
           HCI/Human-AI interaction.{" "}
-          <span className='realistic-marker-highlight'>Highlight Text</span>
         </p>
         <svg
           xmlns='//www.w3.org/2000/svg'
