@@ -22,7 +22,6 @@ const Navbar = () => {
   };
 
   const handleClick = (ref) => {
-    console.log(ref);
     // get top position of element
     let refPos = ref.current.getBoundingClientRect().top;
     // height of navbar

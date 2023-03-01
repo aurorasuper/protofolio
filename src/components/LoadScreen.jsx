@@ -14,13 +14,10 @@ export const LoadScreen = () => {
   const height = window.innerHeight;
 
   useEffect(() => {
-    console.log(pathRef.current.querySelector("path"));
     let path = pathRef.current.querySelector("path");
     gsap.to(imgRef.current, {
-      duration: 2.5,
-      repeat: 12,
-      repeatDelay: 0,
-      yoyo: false,
+      duration: 2,
+      repeat: 5,
       motionPath: {
         path: path,
         align: path,

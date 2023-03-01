@@ -40,11 +40,9 @@ const Contact = () => {
       .then(
         (result) => {
           setEmailSuccess(true);
-          console.log(result);
         },
         (error) => {
           setEmailError(true);
-          console.log(error);
         }
       );
   }
@@ -88,6 +86,15 @@ const Contact = () => {
             <h1 className='text-mainWhite dark:text-mainBlack h2'>
               Get in touch!
             </h1>
+            {emailError && (
+              <div>
+                <h3 className='h3 invertColors'>Oops, something went wrong.</h3>
+                <p className='inverColors'>
+                  In the mean time, checkout my github or connect with me on
+                  Linkedin if you haven't already!{" "}
+                </p>
+              </div>
+            )}
             <form ref={form} onSubmit={handleSubmit} className='flex flex-col'>
               <label className={labelClassname}>Name</label>
               <input
