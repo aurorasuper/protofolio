@@ -9,6 +9,11 @@ Emailjs - to send automatic emails through contact form
 
 I have also created my own svg icons, like the hamburger menu and close icon in mobile devices; the floursish under nav items in bigger devices; and the rotating sticker. The logo was created in Blender and is originally in 3D, also by me. It is currently embedded as an svg but will hopefully be fully 3 dimensional with three.js in soon.
 
+| libraries | motivation |
+___________________________
+| $Gsap$ | for animations |
+|$Email.js$ | send automatic emails |
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
